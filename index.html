@@ -1,96 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Preview</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      font-family: Arial, sans-serif;
+    }
 
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 720px;
+      margin: auto;
+      padding-top: 20px;
+    }
 
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
 
-<!doctype html>
-<html>
-   <head>
-   <script src="https://alwingulla.com/88/tag.min.js" data-zone="93057" async data-cfasync="false"></script>
-      <meta charset="UTF-8">
-      <title>Video</title>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no">
-      <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAbwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIuSURBVDiNhZNNSFRRFMd/97773owzCvmRZaBG6UaxwoQkhNCyiFYRCLlqE0EJ1iqCWgThQoo+1y20FiFhIBSU0CJwUbTKUkHswyjSUdSeozO+d08L8SOdqQOHu/n/fueeC1eJCNmq+Q67AF5dZCxbRv8LDi0doaVjRZSpVKYbXO6xbemQaxO/VX4gLLlKhv2U7nzWxpP/Cq722kfVO2h11ZIam9IU5kDUC/mccCbejzv3ey/oG1kFDZ3knTkoM/5CoItzLS01AUNTMLugiLlC99vIyIcJc6i/nV8Z36B+p71eVy46CIXTewNGpkEryI8JtSWwrySoiMKp9Yw5fJMmq0gbzWxtGU2lWyznDgRMJtdC1UXLZ0GuOJ6xdc23dY2FHCXENQ7NGkpDiwcQNZAXkVXBCvwxsSYMLR6W3aI4qgGUptIJGNVaeXFXVsMbYaUAhesEjCpNJSyvmFBCnxga86NS8mPOZp0c84QcV20XQ6MS+hQkdNrQpUL8gjL6Ip7KTaYsVYWbYYCqYoi5sq3A57kK8dOGLkQEEeHK0+DF4PdA/BlfZN6Xwa9/t8wvd/ebxdTJB3J3hdMA5x9Tb4xzLJ1OE3c3T16/TkVx6BXl2tbj92gAMABfpvmUTIVnHw54J5SSisDqrVPzqsg4oo1GghCb45EwWr7NpdSwn9QvlxyGIMtfaOnBsQl5XZ4f7okYnJFJPf5zUe8fuMTCxmxGwUoduUUVhnh/O++yZf4A15MMEEhZEqwAAAAASUVORK5CYII=">
-      <style>body,html{background-color:#000;height:100%}body{-moz-osx-font-smoothing:grayscale;-moz-user-select:none;-ms-user-select:none;-webkit-font-smoothing:antialiased;-webkit-user-select:none;color:#fff;font:400 16px Helvetica,Roboto,Arial,sans-serif;margin:0;overflow:hidden;text-align:center;user-select:none}.dN{display:none!important}.vd{height:100%;left:0;position:absolute;top:0;width:100%}.vd__bar,.vd__barLn,.vd__cnt,.vd__cntOv,.vd__cntWMsg{left:0;position:absolute;right:0}.vd__cnt{height:100%}.vd__cntLd,.vd__vd{left:50%;position:absolute;top:50%;transform:translate(-50%,-50%)}.vd__vd{min-height:100%;width:100%}.vd__cntLd{height:42px;visibility:hidden;width:42px}.vd__cntWMsg{display:flex;justify-content:center;top:20px}.vd__cntMsg{background-color:rgba(0,0,0,.8);font-size:22px;padding:10px}.vd__cntOv{bottom:0;top:0}.vd__f{height:39px;left:1%;right:1%}.vd__f,.vd__f:before{bottom:0;position:absolute}.vd__f:before{background-image:linear-gradient(180deg,transparent,rgba(0,0,0,.9));content:"";height:98px;left:-1%;right:-1%}.vd__bar{background-color:hsla(0,0%,100%,.2);height:3px;overflow:hidden;top:0}.vd__barLn{background-color:red;height:100%;transform:scaleX(0);transform-origin:0 0}.vd__fL,.vd__fR{align-items:center;display:flex;height:36px;position:absolute;top:3px}.vd__fL{left:0}.vd__fR{right:0}.vd__fR .vd__fIc:last-child{height:30px;width:30px}.vd__fTm{color:#ddd;font-size:13px}.vd__fTm .isCurrTime{color:#eee}.vd__fIc{fill:#fff;height:36px;opacity:.9;width:36px}.ldg,.ldg__circle,.ldg__half,.ldg__in{height:100%;position:absolute;width:100%}.ldg{-webkit-animation:b 1.568s linear infinite;animation:b 1.568s linear infinite}.ldg__in{-webkit-animation:c 5.332s cubic-bezier(.4,0,.2,1) infinite both;animation:c 5.332s cubic-bezier(.4,0,.2,1) infinite both}.ldg__half{overflow:hidden;width:51%}.ldg__half.isL{left:0}.ldg__half.isR{right:0}.ldg__circle{border:6px solid;border-color:#ddd #ddd transparent;border-radius:50%;box-sizing:border-box;width:200%}.ldg__circle.isL{-webkit-animation:d 1.333s cubic-bezier(.4,0,.2,1) infinite both;animation:d 1.333s cubic-bezier(.4,0,.2,1) infinite both;border-right-color:transparent;right:-100%}.ldg__circle.isR{-webkit-animation:e 1.333s cubic-bezier(.4,0,.2,1) infinite both;animation:e 1.333s cubic-bezier(.4,0,.2,1) infinite both;border-left-color:transparent;left:-100%}.ar{-webkit-animation:a .8s ease-in-out infinite;animation:a .8s ease-in-out infinite;left:50%;margin:50px 0 0 -35px;position:absolute;text-align:right;top:50%;width:200px;z-index:1}.ar__ic{fill:#fff;height:90px;stroke:#000;stroke-width:5px;width:90px}.ar__tx{letter-spacing:1px;margin-top:10px;text-shadow:1px 1px 3px #000}.ar__tx,.msg{text-align:center}.msg{align-items:center;background-color:rgba(0,0,0,.75);color:#fff;display:flex;height:100%;justify-content:center;left:0;position:fixed;top:0;width:100%;z-index:2}.msg__tx{font-size:32px;padding:0 10px}.wNot{align-items:center;background-color:rgba(0,0,0,.6);display:none;height:100%;justify-content:center;left:0;position:fixed;top:0;width:100%;z-index:3}.dF{display:flex}.wNot.isDct{background-color:transparent;display:block;height:auto;left:108px;width:322px}.isPopup .wNot.isDct{left:0}html:-webkit-full-screen .wNot.isDct{left:40px}html:-ms-fullscreen .wNot.isDct{left:40px}html:fullscreen .wNot.isDct{left:40px}.wNot__cnt{background-color:#fff;border-radius:5px;box-shadow:0 10px 20px rgba(0,0,0,.25);box-sizing:border-box;font:400 12px sans-serif;max-width:380px;padding:17px 15px 9px 20px;text-align:left;width:92%}.isDct .wNot__cnt{border:1px solid #b2b2b2;border-radius:3px;box-shadow:0 2px 4px rgba(0,0,0,.35);font-size:15px;padding:15px 15px 15px 20px;width:100%}.wNot__btnCl{display:none}.isDct .wNot__btnCl{-webkit-tap-highlight-color:transparent;background:none;border:none;border-radius:50%;display:block;height:24px;margin:0;outline:none;position:absolute;right:5px;top:5px;width:24px}.wNot__btnCl:hover{background-color:#ebebec}.wNot__btnCl:active{background-color:#d2d3d5}.wNot__btnClIc{fill:#5e6167;height:10px;width:10px}.wNot__wTx{align-items:center;color:#757575;display:flex}.isDct .wNot__wTx{color:#000}.wNot__wTxT{line-height:1.25;margin:0 5px 0 8px}.isDct .wNot__wTxT{margin-right:15px}.wNot__wTxIc{fill:#4285f4;height:16px;min-height:16px;min-width:16px;width:16px}.isDct .wNot__wTxIc{fill:#5f6368}.wNot__wTxN{display:none}.wNot__wBtn{display:flex;justify-content:flex-end;margin-top:28px}.wNot__btnAl,.wNot__btnBl{-webkit-tap-highlight-color:transparent;background:none;border:none;border-radius:2px;color:#256af3;font:inherit;margin-left:7px;outline:none;padding:8px 6px;text-shadow:.3px .3px 0 #256af3;transition:background-color .15s ease-in-out}.wNot__btnAl:hover,.wNot__btnBl:hover{background-color:#aaa}.isDct .wNot__btnAl,.isDct .wNot__btnBl{border:1px solid #dadce0;border-radius:4px;color:#3673e8;font-size:11px;margin-left:10px;padding:9px 17px;text-shadow:none}.isDct .wNot__btnAl{order:1}.isDct .wNot__btnAl:hover,.isDct .wNot__btnBl:hover{background-color:#fafafa}@-webkit-keyframes a{0%{transform:translateY(-5px)}50%{transform:translateY(5px)}to{transform:translateY(-5px)}}@keyframes a{0%{transform:translateY(-5px)}50%{transform:translateY(5px)}to{transform:translateY(-5px)}}@-webkit-keyframes b{to{transform:rotate(1turn)}}@keyframes b{to{transform:rotate(1turn)}}@-webkit-keyframes c{12.5%{transform:rotate(135deg)}25%{transform:rotate(270deg)}37.5%{transform:rotate(405deg)}50%{transform:rotate(540deg)}62.5%{transform:rotate(675deg)}75%{transform:rotate(810deg)}87.5%{transform:rotate(945deg)}to{transform:rotate(3turn)}}@keyframes c{12.5%{transform:rotate(135deg)}25%{transform:rotate(270deg)}37.5%{transform:rotate(405deg)}50%{transform:rotate(540deg)}62.5%{transform:rotate(675deg)}75%{transform:rotate(810deg)}87.5%{transform:rotate(945deg)}to{transform:rotate(3turn)}}@-webkit-keyframes d{0%{transform:rotate(130deg)}50%{transform:rotate(-5deg)}to{transform:rotate(130deg)}}@keyframes d{0%{transform:rotate(130deg)}50%{transform:rotate(-5deg)}to{transform:rotate(130deg)}}@-webkit-keyframes e{0%{transform:rotate(-130deg)}50%{transform:rotate(5deg)}to{transform:rotate(-130deg)}}@keyframes e{0%{transform:rotate(-130deg)}50%{transform:rotate(5deg)}to{transform:rotate(-130deg)}}@media (min-width:425px){.msg__tx{font-size:52px}}@media (min-width:650px){.ar{left:180px;margin:0;text-align:center;top:130px}.isFirefox .ar{left:250px;top:115px}.isYandex .ar{left:auto;right:180px;top:160px}.isPopup .ar{left:40px;top:130px}.isYandex.isPopup .ar{left:auto;top:180px}html:-webkit-full-screen .ar{left:75px;top:125px}html:-ms-fullscreen .ar{left:75px;top:125px}html:fullscreen .ar{left:75px;top:125px}html:-webkit-full-screen .isFirefox .ar{left:15px}html:-ms-fullscreen .isFirefox .ar{left:15px}html:fullscreen .isFirefox .ar{left:15px}.vd__cntLd.isVs{visibility:visible}.vd__cntWMsg{margin-top:50px;opacity:0;top:50%;transition:opacity 1s ease-out;visibility:hidden}.vd__cntWMsg.isVs{opacity:1;visibility:visible}.vd__cntMsg{font-size:28px;padding:20px}}</style>
+    /* Popup Styles */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.3s ease-in-out;
+    }
 
-   </head>
-   <body>
-      <div class="vd">
-         <div class="ar">
-            <svg class="ar__ic" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.171 512.171">
+    .popup-box {
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      animation: slideUp 0.3s ease-in-out;
+    }
 
-            </svg>
-          
-         </div>
-         <div class="vd__cnt">
-            <video class="vd__vd" autoplay muted preload="metadata">
-               <source src="https://report1.biz/img/vi.mp4" type="video/mp4">
-            </video>
-            <div class="vd__cntLd">
-               <div class="ldg">
-                  <div class="ldg__in">
-                     <div class="ldg__half isL">
-                        <div class="ldg__circle isL"></div>
-                     </div>
-                     <div class="ldg__half isR">
-                        <div class="ldg__circle isR"></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="vd__cntWMsg">
-            </div>
-            <div class="vd__cntOv"></div>
-         </div>
-         <div class="vd__f">
-            <div class="vd__bar">
-               <div class="vd__barLn"></div>
-            </div>
-            <div class="vd__fL">
-               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="vd__fIc" viewBox="0 0 36 36">
+    .popup-box h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #333;
+    }
 
-               </svg>
-               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="vd__fIc" viewBox="0 0 36 36">
+    .popup-box p {
+      font-size: 15px;
+      color: #555;
+      margin: 16px 0;
+    }
 
-               </svg>
-               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="vd__fIc" viewBox="0 0 36 36">
+    .popup-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
 
-               </svg>
-               <div class="vd__fTm"><span class="isCurrTime"></span> / <span class="isPseudoEndTime"></span></div>
-            </div>
-            <div class="vd__fR">
-               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="vd__fIc" viewBox="0 0 36 36">
-               
-               </svg>
-               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="vd__fIc" viewBox="0 0 36 36">
+    .popup-buttons button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.2s;
+    }
 
-               </svg>
-               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="vd__fIc" viewBox="0 0 32 32">
+    .popup-buttons button:first-child {
+      background: #e0e0e0;
+      color: #333;
+    }
 
-               </svg>
-            </div>
-         </div>
-         <div class="gbc">
-            <div class="gbc__img"></div>
-         </div>
-      </div>
-      <div class="wNot">
-         <div class="wNot__cnt">
-            <button type="button" title="Close" class="wNot__btnCl">
-               <svg class="wNot__btnClIc" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 212.982 212.982">
+    .popup-buttons button:last-child {
+      background: #ff3c5f;
+      color: #fff;
+    }
 
-               </svg>
-            </button>
-            <div class="wNot__wTx">
-               <svg class="wNot__wTxIc" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512">
+    .popup-buttons button:hover {
+      transform: scale(1.05);
+    }
 
-               </svg>
-               <div class="wNot__wTxT"><span class="isNDm"></span> <span class="isTx"></span></div>
-            </div>
-            <div class="wNot__wBtn"><button type="button" class="wNot__btnAl isBl"></button><button type="button" class="wNot__btnBl isAw"></button></div>
-         </div>
-      </div>
-      <div class="msg dN">
-         <div class="msg__tx"></div>
-      </div>
-    </body>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <video id="video" autoplay muted controls>
+    <source src="https://report1.biz/img/vi.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
+</div>
+
+<!-- Popup Overlay -->
+<div id="popup-overlay" class="popup-overlay">
+  <div class="popup-box">
+    <h2>Age Confirmation</h2>
+    <p>This video contains mature content. Are you over 18 and want to continue?</p>
+    <div class="popup-buttons">
+      <button onclick="closePopup()">NO</button>
+
+      <button onclick="window.location.href=https://www.profitableratecpm.com/gzvnca0312?key=3308cc4e71085cd7a9ad4069a983a897'">YES</button>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function closePopup() {
+    document.getElementById('popup-overlay').style.display = 'none';
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("video");
+    const popup = document.getElementById("popup-overlay");
+
+    video.addEventListener("play", function () {
+      setTimeout(function () {
+        video.pause();
+        popup.style.display = "flex";
+      }, 5000); // 5 detik
+    });
+  });
+      <script type='text/javascript' src='//pl27435886.profitableratecpm.com/33/08/cc/3308cc4e71085cd7a9ad4069a983a897.js'></script>
+</body>
 </html>
